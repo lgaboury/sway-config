@@ -1,0 +1,22 @@
+* {
+    border: none;
+    border-radius: 0px;
+    font-family: "Fira Code";
+    font-size: 14px;
+}
+    
+#window {
+    border: 3px solid --wofi-color2;
+    background-color: rgba(--wofi-rgb-color1, 1.0);
+    color: --wofi-color7;
+}
+
+#input {
+    border: 3px solid --wofi-color2;
+    background-color: --wofi-color0;
+    color: --wofi-color7;
+}
+
+#entry:selected {
+    background-color: --wofi-color3;
+}

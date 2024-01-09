@@ -1,0 +1,5 @@
+mode=drun
+prompt=Type to Search...
+width=35%
+location=center
+hide_scroll=true

@@ -1,0 +1,217 @@
+@import '../../.cache/wal/colors-waybar.css';
+
+* {
+    all: unset;
+    /* `otf-font-awesome` is required to be installed for icons */
+    font-family: "FiraCode";
+    font-size: 14px;
+}
+
+window#waybar {
+    background-color: alpha(@color9, 0.6);
+    border: 1px solid alpha(@background, 0.1);
+}
+
+window#waybar.hidden {
+    opacity: 0.2;
+}
+
+#workspaces {
+    margin: 5px 0px 5px 5px;
+    padding: 3px 3px 3px 3px;
+    border: 2px solid @color11;
+    border-radius: 7px;
+    background: @background;
+}
+
+#workspaces button {
+    padding: 2px 5px 0px 6px;
+    color: @color11
+}
+
+#workspaces button.persistent {
+    color: @color9;
+}
+
+#workspaces button.focused {
+    color: white;
+}
+
+#workspaces button.urgent {
+    border-radius: 4px;
+    background-color: #eb4d4b;
+    color: white;
+}
+
+/* 
+https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect 
+*/
+#workspaces button:hover {
+    border-radius: 4px;
+    color: white;
+    background: @color12;
+}
+
+tooltip {
+    margin: 5px 5px 5px 0px;
+    padding: 10px 10px 10px 10px;
+    border: 2px solid @color3;
+    border-radius: 7px 7px 7px 7px;
+    color: @foreground;
+    background: @background;
+}
+
+#language {
+    margin: 5px 0px 5px 5px;
+    padding: 0px 3px 0px 5px;
+    border: 2px solid @color11;
+    border-right: none;
+    border-radius: 7px 0px 0px 7px;
+    color: @foreground;
+    background: @background;
+}
+
+#keyboard-state {
+    margin: 5px 5px 5px 0px;
+    padding: 0px 5px 0px 5px;
+    border: 2px solid @color11;
+    border-left: none;
+    border-radius: 0px 7px 7px 0px;
+    color: @foreground;
+    background: @background;
+}
+
+#custom-pacman {
+    margin: 5px 0px 5px 0px;
+    padding: 0px 5px 0px 10px;
+    border: 2px solid @color11;
+    border-right: none;
+    border-radius: 7px 0px 0px 7px;
+    color: @foreground;
+    background: @background;
+}
+
+#custom-mail {
+    margin: 5px 5px 5px 0px;
+    padding: 0px 10px 0px 10px;
+    border: 2px solid @color11;
+    border-left: none;
+    border-radius: 0px 7px 7px 0px;
+    color: @foreground;
+    background: @background;
+}
+
+#mode {
+    margin: 5px 0px 5px 0px;
+    padding: 0px 10px 0px 10px;
+    border: 2px solid @color11;
+    border-radius: 7px 7px 7px 7px;
+    color: @foreground;
+    background: @background;
+}
+
+#clock {
+    margin: 5px 0px 5px 0px;
+    padding: 0px 5px 0px 10px;
+    border: 2px solid @color11;
+    border-right: none;
+    border-radius: 7px 0px 0px 7px;
+    color: @foreground;
+    background: @background;
+}
+
+#custom-weather {
+    margin: 5px 5px 5px 0px;
+    padding: 0px 10px 0px 10px;
+    border: 2px solid @color11;
+    border-left: none;
+    border-radius: 0px 7px 7px 0px;
+    color: @foreground;
+    background: @background;
+}
+
+#pulseaudio {
+    margin: 5px 5px 5px 0px;
+    padding: 0px 10px 0px 10px;
+    border: 2px solid @color11;
+    border-radius: 7px 7px 7px 7px;
+    color: @foreground;
+    background: @background;
+}
+
+#pulseaudio.muted {
+    background-color: #90b1b1;
+    color: #2a5c45;
+}
+
+#custom-mem {
+    margin: 5px 5px 5px 0px;
+    padding: 0px 10px 0px 10px;
+    border: 2px solid @color11;
+    border-radius: 7px 7px 7px 7px;
+    color: @foreground;
+    background: @background;
+}
+
+#backlight {
+    margin: 5px 5px 5px 0px;
+    padding: 0px 10px 0px 10px;
+    border: 2px solid @color11;
+    border-radius: 7px 7px 7px 7px;
+    color: @foreground;
+    background: @background;
+}
+
+#battery {
+    margin: 5px 5px 5px 0px;
+    padding: 0px 10px 0px 10px;
+    border: 2px solid @color11;
+    border-radius: 7px 7px 7px 7px;
+    color: @foreground;
+    background: @background;
+}
+
+#battery.charging {
+    color: #ffffff;
+    background-color: #26A65B;
+}
+
+#battery.warning:not(.charging) {
+    background-color: #ffbe61;
+    color: black;
+}
+
+#battery.critical:not(.charging) {
+    background-color: #f53c3c;
+    color: #ffffff;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#tray {
+    margin: 5px 5px 5px 0px;
+    padding: 0px 10px 0px 10px;
+    border: 2px solid @color3;
+    border-radius: 7px 7px 7px 7px;
+    color: @foreground;
+    background: @background;
+}
+
+#tray menu {
+    margin: 5px 5px 5px 0px;
+    padding: 10px 10px 10px 10px;
+    border: 2px solid @color3;
+    border-radius: 7px 7px 7px 7px;
+    color: @foreground;
+    background: @background;
+}
+
+@keyframes blink {
+    to {
+        background-color: @background;
+        color: @foreground;
+    }
+}
